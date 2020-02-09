@@ -1,0 +1,45 @@
+body{
+	background-color: #1b262c;
+}
+
+h1{
+	padding-top: 5%;
+	padding-left: 1%;
+	font-family: "calibri";
+	color: #bbe1fa;
+	text-align: center;
+}
+
+h2{
+	font-family: "calibri light";
+	color: white;
+	padding: 2%;
+}
+
+h3{
+	
+	font-family: "calibri light";
+	color: white;
+	padding-left: 5%;
+	
+}
+
+.btn{
+	width: 30%;
+	text-align: center;
+	margin:2%;
+	padding: 2%;
+}
+.myButton{
+	text-align: center;
+}
+input{
+	margin: 2%;
+}
+
+
+footer{
+	text-align: center;
+	margin-top: 4%;
+	color: white;
+}
