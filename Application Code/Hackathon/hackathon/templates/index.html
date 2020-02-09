@@ -64,7 +64,7 @@
            
           <div class="container"style="margin-bottom: 20px;">
             {% for event in event_data %}
-            <div style="text-align: center; margin-bottom: 20px; background-color: black;" id = "hide{{loop.index}}" class="card ">
+            <div style="text-align: center; margin-bottom: 20px; background-color: black;" class="card ">
               
                  
                 <ul uk-accordion>
@@ -107,7 +107,7 @@
                   if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("demo"+"{{loop.index}}").innerHTML = "Already Happened";
-                    document.getElementById("hide"+"{{loop.index}}").className+="d-none";
+                    // document.getElementById("hide"+"{{loop.index}}").className+="d-none";
                   }
                 }, 1000);
                 </script>

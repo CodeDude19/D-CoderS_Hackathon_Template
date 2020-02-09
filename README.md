@@ -1,7 +1,6 @@
 ## Team Number - 44
 ## Team Name - stillVariables
 ## Project Name - Events Info Page
-The participants are required to fork this repository and create a public Github repository under their own username (Single repository per team). The following created sections in this README.md need to be duly filled, highlighting the denoted points for the solution/implementation. Please feel free to create further sub-sections in this markdown, the idea is to understand the gist of the components in a singular document.
 
 ### Project Overview
 ----------------------------------
@@ -25,8 +24,8 @@ Problem Statement
 #### Technical Description
 
 * Frontend : HTML,CSS,Bootstrap,JavaScript
-  Backend : Flask
-  DataBase : SQLite
+*  Backend : Flask
+*  DataBase : SQLite
 
   To run the project you need to install all the dependencies listed in requirements.txt file 
   To do so run the following command "pip install -r /path/to/requirements.txt"
