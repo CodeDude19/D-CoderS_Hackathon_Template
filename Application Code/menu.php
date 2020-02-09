@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Menu</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styleLogin.css">
+	<link rel="stylesheet" type="text/css" href="styleButton.css">
 </head>
 <body>
 <!-- NavBar-->
@@ -21,37 +21,27 @@
         <a class="nav-link" href="company.html">Companies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="loginForm.html">Login</a>
+        <a class="nav-link" href="loginForm.php">Login</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<h1>Login</h1>
-<!-- Form -->
-<form method="post" action="validate.php">
-  <div class="form-group">
-    <label for="exampleInputEmail1"><h4>Username</h4></label>
-    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1"><h4>Password</h4></label>
-    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<h1>Menu</h1>
+<div class="myButton">
+  <a href="upcomingForm.php">
+<button type="button" class="btn btn-primary">Upcoming Companies</button></a><br>
+<a href="previousForm.php">
+<button type="button" class="btn btn-primary">Previous Companies</button></a><br>
+<a href="ongoingForm.php">
+<button type="button" class="btn btn-primary">Ongoing Companies</button></a>
+</div>
 
 
-
-
-
-
-
-
-
-
-
+<!---- Including PHP File Here ---->
+<?php
+include "include/menu.php";
+?>
 
 
 

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Previous Form</title>
+	<title>Login</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styleLogin.css">
-	
 </head>
 <body>
 <!-- NavBar-->
@@ -14,27 +13,38 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="company.html">Companies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="loginForm.php">Login</a>
+      </li>
+    </ul>
   </div>
 </nav>
-<div class="myForm">
-	<h1>Previous Placements</h1><h2>Entry Form</h2>
-	<form action="connect1.php" method="post">
-		<h4>Company ID</h4>
-		<input type="number" name="companyID">
-		<h4>Company Name</h4>
-		<input type="text" name="companyName">
-		<h4>Starting Date</h4>
-		<input type="text" name="startDate">
-		<h4>Ending Date</h4>
-		<input type="text" name="endDate">
-		<br>
-		<input type="submit" name="submit" class="btn btn-primary">
-	</form>
-</div>
 
+<h1>Login</h1>
+<!-- Form -->
+<form method="post" action="validate.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h4>Username</h4></label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><h4>Password</h4></label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-
+<?php
+include "include/validate.php";
+?>
 
 
 

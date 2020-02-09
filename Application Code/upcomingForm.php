@@ -3,23 +3,44 @@
 <head>
 	<title>Upcoming Form</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styleLogin.css">
 	
 </head>
 <body>
+<!-- NavBar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">placeMate.</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="company.html">Companies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="loginForm.php">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="myForm">
-	<h1>Upcoming Placements Entry Form</h1><br><br><br><br>
+	<h1>Upcoming Placements</h1><h2>Entry Form</h2>
 	<form action="connect2.php" method="post">
-		<h2>Company ID</h2>
+		<h4>Company ID</h4>
 		<input type="number" name="companyID">
-		<h2>Company Name</h2>
+		<h4>Company Name</h4>
 		<input type="text" name="companyName">
-		<h2>Starting Date</h2>
+		<h4>Starting Date</h4>
 		<input type="text" name="startDate">
-		<h2>Ending Date</h2>
+		<h4>Ending Date</h4>
 		<input type="text" name="endDate">
 		<br>
-		<input type="submit" name="submit">
+		<input type="submit" name="submit" class="btn btn-primary">
 	</form>
 </div>
 
