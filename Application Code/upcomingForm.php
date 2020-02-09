@@ -24,6 +24,16 @@
       <li class="nav-item">
         <a class="nav-link" href="loginForm.php">Login</a>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Placement Details
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="ongoing_display.php">Ongoing Companies</a>
+          <a class="dropdown-item" href="upcoming_display.php">Upcoming Companies</a>
+          <a class="dropdown-item" href="pervious_display.php">Previous Companies</a>
+      </li>
     </ul>
   </div>
 </nav>

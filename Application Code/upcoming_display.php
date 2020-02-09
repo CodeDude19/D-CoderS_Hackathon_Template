@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Previous Form</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styleLogin.css">
+	<title>Upcoming</title>
 	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="reult.css">
+	<style type="text/css">
+		*{
+			text-align: center;
+	}
+	body{
+		background-color: #1b262c;
+	}
+	h1{
+		padding-top: 5%;
+		padding-left: 1%;
+		font-family: "calibri";
+		color: #bbe1fa;
+	}
+	.table{
+		margin: 2%;
+
+	}
+	</style>
 </head>
 <body>
+
+
 <!-- NavBar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">placeMate.</a>
@@ -38,21 +58,80 @@
   </div>
 </nav>
 
-<div class="myForm">
-	<h1>Ongoing Placements</h1><h2>Entry Form</h2>
-	<form action="connect1.php" method="post">
-		<h4>Company ID</h4>
-		<input type="number" name="companyID">
-		<h4>Company Name</h4>
-		<input type="text" name="companyName">
-		<h4>Starting Date</h4>
-		<input type="text" name="startDate">
-		<h4>Ending Date</h4>
-		<input type="text" name="endDate">
-		<br>
-		<input type="submit" name="submit" class="btn btn-primary">
-	</form>
+
+
+
+
+<h1>Upcoming Companies </h1>
+
+<br>
+<div class="table table-striped table-dark">
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli('localhost','root','','upcoming');
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT c_id,company_name,start_date,end_date FROM companies";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<table border='1'>
+
+			<tr>
+
+			<th>Id</th>
+
+			<th>Start Date</th>
+
+			<th>End Date</th>
+
+			<th>Company Name</th>
+
+			</tr>";
+
+			 
+
+			while($row = mysqli_fetch_array($result))
+
+			  {
+
+			  echo "<tr>";
+
+			  echo "<td>" . $row['c_id'] . "</td>";
+
+			  echo "<td>" . $row['start_date'] . "</td>";
+
+			  echo "<td>" . $row['end_date'] . "</td>";
+
+			  echo "<td>" . $row['company_name'] . "</td>";
+
+			  echo "</tr>";
+
+			  }
+
+		echo "</table>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
 </div>
+
+
+
+
 
 
 
@@ -66,3 +145,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
