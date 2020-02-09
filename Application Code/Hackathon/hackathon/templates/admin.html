@@ -21,7 +21,7 @@
           </ul>
           <a class="nav-link" href="{{url_for('add')}}"><button type="button" class="btn btn-link text-dark" style="margin-right: 4px;">Add</button></a>
           <form method="POST" action="{{url_for('logout')}}">
-          <button type="button" class="btn btn-link text-dark" style="margin-right: 4px;">Logout</button>
+          <button type="submit" class="btn btn-link text-dark" style="margin-right: 4px;">Logout</button>
           </form>
         </div>
       </nav>
@@ -32,6 +32,11 @@
         <div class="card-body">
           <center><h5 class="card-title">Description</h5></center>
           <center><p style="color: black;" class="card-text">{{event.desctiption}}</p></center>
+          <center><p style="margin-top: 5px;">Date : {{today}}</p></center>
+          <script>
+            var name = '{{ event.date }}';
+            console.log(name)
+          </script>
           <hr>
           <form method="POST" action="{{url_for('delete')}}">
             <center><button type="submit" name="delete" value="{{ event.id }}" class="btn btn-outline-danger">Delete</button></center>
@@ -40,7 +45,6 @@
       </div>
       {% endfor %}
     </div>
-    
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

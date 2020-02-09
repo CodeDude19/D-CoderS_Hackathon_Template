@@ -1,5 +1,5 @@
 import os
-import datetime
+from datetime import *
 from flask import Flask, render_template, url_for, redirect, session, escape, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -45,7 +45,7 @@ class Event(db.Model):
         self.desctiption=desctiption
 
     def __repr__(self):
-        return f"Event name is : {self.event_name}"    
+        return f"{self.event_name} {self.organiser_name} {self.date} {self.desctiption}"    
 
 @app.route('/')
 def index():
@@ -96,11 +96,12 @@ def register():
 
 @app.route('/admin')
 def admin():
+    msg = None
     if 'email' in session :
         email = session['email']
         user = User.query.filter_by(email=email).first()
-        event_data = Event.query.all()
-        return render_template('admin.html',event_data = event_data)
+        event_data = Event.query.all()     
+        return render_template('admin.html',event_data = event_data,today=date.today())
 
     else :    
         return render_template('login.html')      
