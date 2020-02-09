@@ -20,7 +20,6 @@
 	}
 	.table{
 		margin: 2%;
-
 	}
 	</style>
 </head>
@@ -52,7 +51,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="ongoing_display.php">Ongoing Companies</a>
           <a class="dropdown-item" href="upcoming_display.php">Upcoming Companies</a>
-          <a class="dropdown-item" href="pervious_display.php">Previous Companies</a>
+          <a class="dropdown-item" href="previous_display.php">Previous Companies</a>
       </li>
     </ul>
   </div>
@@ -63,8 +62,8 @@
 
 
 <h1>Upcoming Companies </h1>
-
 <br>
+
 <div class="table table-striped table-dark">
 
 <?php
@@ -74,7 +73,7 @@ $password = "password";
 $dbname = "myDB";
 
 // Create connection
-$conn = new mysqli('localhost','root','','upcoming');
+$conn = new mysqli('localhost','root','','ongoing');
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

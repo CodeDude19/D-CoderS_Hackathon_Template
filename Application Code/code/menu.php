@@ -31,7 +31,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="ongoing_display.php">Ongoing Companies</a>
           <a class="dropdown-item" href="upcoming_display.php">Upcoming Companies</a>
-          <a class="dropdown-item" href="pervious_display.php">Previous Companies</a>
+          <a class="dropdown-item" href="previous_display.php">Previous Companies</a>
       </li>
     </ul>
   </div>
