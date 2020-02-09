@@ -13,9 +13,14 @@ A brief description of
 
 
 ### Solution Description
-	the website has a homepage which contains the following tabs:HOME,COMPANIES and LOGIN(for admin login).
+	The website has a homepage which contains the following tabs:
+		HOME,COMPANIES and LOGIN(for admin login)
+
 	The companies tab will have the description of all the companies.
-	After the admin has logged in,he or she would be taken to a page which has 3 buttons:upcoming,ongoing and previous.On clicking a button say 'UPCOMING',the admin can update the 'UPCOMING COMPANIES' database.
+	After the admin has logged in,he or she would be taken to a page which has 3 buttons:
+		upcoming,ongoing and previous
+
+	On clicking a button say 'UPCOMING',the admin can update the 'UPCOMING COMPANIES' database.
 	
 #### Architecture Diagram
 
