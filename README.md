@@ -1,4 +1,4 @@
-## Team Number - Project Name
+## Team Number 48 - T&P Info Page
 
 The participants are required to fork this repository and create a public Github repository under their own username (Single repository per team). The following created sections in this README.md need to be duly filled, highlighting the denoted points for the solution/implementation. Please feel free to create further sub-sections in this markdown, the idea is to understand the gist of the components in a singular document.
 
@@ -8,6 +8,12 @@ The participants are required to fork this repository and create a public Github
 A brief description of 
 * What problem did the team try to solve
 * What is the proposed solution
+
+
+
+
+
+
 
 ### Solution Description
 ----------------------------------
