@@ -45,9 +45,12 @@ An overview of
 	----------------------------------
 
 List of team member names and email IDs with their contributions
-	1.AYUSHI PRASAD
-		backend
-	2.AYUSHI
-		frontend
-	3.SWAGAT PANDA
-		frontend
+	1.Ayushi Prasad
+		email - ayushiprasad850@gmail.com
+		contribution - Backend
+	2.Ayushi
+		email - kayushi999@gmail.com
+		contribution - Frontend
+	3.Swagat
+		email - swagatp99@gmail.com
+		contribution - Fontend
