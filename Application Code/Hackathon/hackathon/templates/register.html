@@ -13,7 +13,8 @@
   <body>
     <!--NavBar-->
     <nav class="navbar sticky-top navbar-light bg-light bg-transparent">
-        <a class="navbar-brand" href="#">E-Feed</a>
+        <a class="navbar-brand" href="#">Events Manager</a>
+        <a href="{{url_for('login')}}"><button type="button" class="btn btn-dark">Login</button></a>
       </nav>
       <hr>
     <!--NavBar Ends-->
@@ -35,6 +36,13 @@
                 </div>
                 <button type="submit" class="btn btn-dark">Submit</button>
               </form>
+
+              {% if error %}
+              <hr>
+              <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+              {% endif %}
         </div>
     </div>
     <!--Main Body Ends-->

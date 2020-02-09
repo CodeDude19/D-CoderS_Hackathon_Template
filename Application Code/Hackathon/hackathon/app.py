@@ -1,6 +1,6 @@
 import os
 import datetime
-from flask import Flask, render_template, url_for, redirect, session, escape, request
+from flask import Flask, render_template, url_for, redirect, session, escape, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -53,16 +53,22 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST' :
         email = request.form['email']
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
         if not user :
-            return render_template('login.html')
-        else :
-            if email == user.email and password == user.password :
-                session['email'] = email
-                return redirect(url_for('admin')) 
+            error = 'Not an User, Sign-up first'
+            return render_template('login.html',error = error)
+
+        elif email == user.email and password == user.password :
+            session['email'] = email
+            return redirect(url_for('admin')) 
+
+        else:
+            error = 'Invalid Credentials'
+            return render_template('login.html',error = error)
 
     else :
         return render_template('login.html')
@@ -70,14 +76,20 @@ def login():
 
 @app.route('/register',methods=['GET','POST'])
 def register():
+    error = None
     if request.method == 'POST' :
         email = request.form['email']
         password = request.form['password']
-        
-        new_user = User(email,password)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
+        user = User.query.filter_by(email=email).first()
+        if not user :
+            new_user = User(email,password)
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for('login'))
+
+        else :
+            error = 'User already Exists'
+            return render_template('register.html',error=error)
 
     else :
         return render_template('register.html')        
@@ -119,6 +131,16 @@ def add():
     else:
 
         return render_template('add.html')
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+
+    if request.method == 'POST' :
+        if 'email' in session :
+            session.pop('email')
+            return redirect(url_for('index'))
+
 
 
 if __name__ == '__main__':
