@@ -49,7 +49,8 @@ class Event(db.Model):
 
 @app.route('/')
 def index():
-    return redirect(url_for('login'))
+    event_data = Event.query.all()
+    return render_template('index.html',event_data = event_data)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
