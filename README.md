@@ -19,7 +19,7 @@ Problem Statement
 
 #### Architecture Diagram
 
-![alt text][]
+![Architecture Diagram](https://github.com/workdone0/D-CoderS_Hackathon_Template/blob/master/architecture_diagram.jpeg)
 
 #### Technical Description
 
