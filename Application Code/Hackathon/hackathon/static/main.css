@@ -1,0 +1,20 @@
+body{
+    background-color: #cd6684;
+}
+#carouselExampleIndicators{
+    margin-top: 50px;
+}
+.cardmain{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 60px;
+    color: black;
+}
+.nav-link{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.navigate{
+    background-color: #cd6684;
+    color:white;
+}
